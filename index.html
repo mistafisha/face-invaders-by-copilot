@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Invaders by Copilot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>Face Invaders by Copilot</h1>
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="label">Score:</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Wave:</span>
+                    <span class="value" id="wave">1</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Lives:</span>
+                    <span class="value" id="lives">3</span>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <div class="game-footer">
+            <div id="gameOverScreen" class="game-screen hidden">
+                <div class="screen-content">
+                    <h2>GAME OVER</h2>
+                    <p>Final Score: <span id="finalScore">0</span></p>
+                    <p>Wave Reached: <span id="finalWave">1</span></p>
+                    <button onclick="location.reload()">Play Again</button>
+                </div>
+            </div>
+            <div id="startScreen" class="game-screen">
+                <div class="screen-content">
+                    <h2>Face Invaders</h2>
+                    <p>by Copilot</p>
+                    <div class="controls-info">
+                        <p>← → Arrow Keys to Move</p>
+                        <p>SPACEBAR to Shoot</p>
+                        <p>R to Restart</p>
+                    </div>
+                    <button onclick="startGame()">Start Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
